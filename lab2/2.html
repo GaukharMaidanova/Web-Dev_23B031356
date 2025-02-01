@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 900px;
+            width: 100%;
+            flex-wrap: wrap;
+            
+        }
+        .phones img {
+            width: 100%;
+            max-width: 400px;
+            flex-shrink: 0;
+            margin-right: 50px;
+        }
+        .download img{
+            width:100%;
+            max-width: 200px;
+            flex-shrink: 0;
+            margin-left: 2px;
+            margin-top: 20px;
+        }
+        .download-text{
+            font-size: 14px;
+            margin: 20px;
+        }
+        .login-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-left: 50px;
+        }
+        .login-box {
+            background: white;
+            padding: 20px;
+            border: 1px solid #dbdbdb;
+            text-align: center;
+            max-width: 350px;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .login-box h1 {
+            font-family: 'Pacifico', cursive;
+            font-size: 2rem;
+        }
+        .login-box input {
+            width: 320px;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #dbdbdb;
+            border-radius: 3px;
+        }
+        .login-box button {
+            width: 100%;
+            padding: 10px;
+            background: #0095f6;
+            border: none;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+        .separator {
+            margin: 10px 0;
+            font-size: 14px;
+            color: #999;
+        }
+        .fb-login {
+            width: 100%;
+            padding: 10px;
+            background: #0095f6;
+            border: none;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 3px;
+            margin: 10px;
+        }
+        .forgot-password{
+          margin: 15px 0;
+          color: #254d82;
+          text-decoration: none;
+          font-size: 14px;
+        }
+        .register-box {
+            background: white;
+            padding: 15px;
+            border: 1px solid #dbdbdb;
+            text-align: center;
+            max-width: 350px;
+            width: 100%;
+            margin: 20px;
+        }
+        .register-box a {
+            color: #0095f6;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 12px;
+            color: #999;
+        }
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            font-size: 12px;
+            color: #606770;
+        }
+        .footer-links li {
+            cursor: pointer;
+            }
+
+        .footer-links li:hover {
+            text-decoration: underline;
+            }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .phones img {
+                max-width: 300px;
+            }
+        }
+        .hr-text {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin: 20px 0;
+            color: #999;
+        }
+        .hr-text::before,
+        .hr-text::after {
+            content: "";
+            flex: 1;
+            border-bottom: 1px solid #999;
+            
+        }
+        .hr-text:not(:empty)::before {
+            margin-right: 5px;
+        }
+        .hr-text:not(:empty)::after {
+            margin-left: 5px;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="phones">
+            <img src="Снимок экрана 2025-01-29 102118.png" alt="Instagram на телефоне">
+        </div>
+        <div class="login-container">
+          <div class="login-box">
+              <h1>Instagram</h1>
+              <form>
+                  <input type="text" placeholder="Телефон, имя пользователя или эл. адрес">
+                  <input type="password" placeholder="Пароль">
+                  <button type="submit"><a href="https://www.instagram.com/accounts/login/?next=%2Flogin%2F&source=desktop_nav">Войти</a></button>
+                  <div class="hr-text">Или</div>
+                  <button class="fb-login"><a href="https://www.facebook.com/login.php?next=https%3A%2F%2Fwww.facebook.com%2Foidc%2F%3Fapp_id%3D124024574287414%26redirect_uri%3Dhttps%253A%252F%252Fwww.instagram.com%252Faccounts%252Fsignupviafb%252F%26response_type%3Dcode%26scope%3Dopenid%2Bemail%2Bprofile%2Blinking%26state%3DATCABh1KU1RSv5BtFVRCoE0XwH8LAZz8IMn1_YwMOJr0bQzvfr5kriXAufellfSXVjneDXPKlbUSkN8dbdvfNd3_E6SlYEYN9ohwN2Drfrvi7ijjTRmCAUChRO_gZSKzhDDlzkS39m6s8EKQfWZ8uWmYoU3PzmFMfbwqg2F4Y7YQk7b3nOpOwODyTO2wjVGuNMgp9gWzVvPHigAvovIbXLQBatnRFQWS8b0CZV5mWcLDUzBIJh1s56UOLuD6rNfkFPe6s9jFZ8a5cLkkYAMzCg">Войти через Facebook</a></button>
+                  <a href="https://www.instagram.com/accounts/password/reset/" class="forgot-password">Забыли пароль?</a>
+              </form>
+          </div>
+          <div class="register-box">
+              У вас ещё нет аккаунта? <a href="https://www.instagram.com/accounts/emailsignup/">Зарегистрироваться</a>
+          </div>
+          <div style: font-size="14px">
+            Установите приложение
+          </div>
+          <div class="download">
+            <img src="Снимок экрана 2025-01-29 192928.png" alt="Установить приложение">
+          </div>
+      </div>
+  </div>
+  <footer>
+    <ul class="footer-links">
+        <li>Meta</li>
+        <li>Информация</li>
+        <li>Блог</li>
+        <li>Вакансии</li>
+        <li>Помощь</li>
+        <li>API</li>
+        <li>Конфиденциальность</li>
+        <li>Условия</li>
+        <li>Места</li>
+        <li>Instagram Lite</li>
+        <li>Threads</li>
+        <li>Загрузка контактов и лица, не являющиеся пользователями</li>
+        <li>Meta Verified</li>
+      </ul>
+      <div>
+      <ul class="footer-links">
+        <li>Русский v</li>
+      </ul>
+       &copy; 2025 Instagram from Meta
+      </div>
+  </footer>
+</body>
+</html>
