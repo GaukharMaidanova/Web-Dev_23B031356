@@ -1,0 +1,18 @@
+<div class="product-list">
+    @for (product of products; track product.id) {
+      <div class="product-card">
+        <img [src]="product.image" [alt]="product.name">
+        <h3>{{ product.name }}</h3>
+        <div class="gallery">
+            <img *ngFor="let img of product.gallery" [src]="img" [alt]="product.name">
+        </div>
+        <p>{{ product.description }}</p>
+        <p>⭐ Rating: {{ product.rating }}</p>
+        <p>Likes: {{ product.like }}</p>
+        <a [href]="product.link" target="_blank">View on Kaspi</a>
+        <button (click)="share(product)">📢 Share</button>
+        <button (click)="likeProduct(product)">Like</button>
+        <button (click)="remove.emit(product.id)">Remove</button>
+      </div>
+    }
+  </div>
